@@ -1,0 +1,102 @@
+#1 Print day of week name using switch case 
+
+day = int(input("Enter day number (1-7): "))
+match day:
+    case 1:
+        print("Sunday")
+    case 2:
+        print("Monday")
+    case 3:
+        print("Tuesday")
+    case 4:
+        print("Wednesday")
+    case 5:
+        print("Thursday")
+    case 6:
+        print("Friday")
+    case 7:
+        print("Saturday")
+    case _:
+        print("Invalid day number")
+
+#2 Print total number of days in a month using switch case 
+
+month = int(input())
+match month:
+    case 1 | 3 | 5 | 7 | 8 | 10 | 12:
+        print("31 days")
+    case 4 | 6 | 9 | 11:
+        print("30 days")
+    case 2:
+        print("28 or 29 days")
+    case _:
+        print("Invalid month number")
+
+#3 Check whether an alphabet is vowel or consonant using switch case
+
+ch = input().lower()
+match ch:
+    case 'a' | 'e' | 'i' | 'o' | 'u':
+        print("Vowel")
+    case _ if ch.isalpha() and len(ch) == 1:
+        print("Consonant")
+    case _:
+        print("Invalid input")
+
+#4 Find maximum between two numbers using switch case
+
+a,b = map(int,input().split())
+match (a > b, a == b):
+    case (True, False):
+        print(f"{a} is maximum")
+    case (False, True):
+        print("Both numbers are equal")
+    case (False, False):
+        print(f"{b} is maximum")
+
+#5 Check whether a number is even or odd using switch case
+
+num = int(input())
+match num % 2:
+    case 0:
+        print("Even number")
+    case 1:
+        print("Odd number")
+
+#6 Check whether a number is positive, negative or zero using switch case 
+
+num = int(input())
+match (num > 0,num != 0):
+    case (True, True):
+        print("positive")
+    case (False, True):
+        print("negative")
+    case (False, False):
+        print("zero") 
+
+#7 Create Simple Calculator using switch case
+
+a,b = map(int,input().split())
+operator = input("Enter operator (+, -, *, /): ")
+
+match operator:
+    case '+':
+        print(a + b)
+    case '-':
+        print(a - b)
+    case '*':
+        print(a * b)
+    case '/':
+        if b != 0:
+            print(a / b)
+        else:
+            print("Cannot divide by zero")
+    case _:
+        print("Invalid operator")
+
+
+
+
+
+
+
