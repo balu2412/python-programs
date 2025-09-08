@@ -1,0 +1,143 @@
+#1 Input and output of all basic data types
+
+integer = int(input())
+floating = float(input())
+character = input()
+string = input()
+boolean = bool(input())
+print(integer)
+print(floating)
+print(character)
+print(string)
+print(boolean)
+
+#2 Enter two numbers and find their sum
+
+a,b=map(eval,input().split())
+print(a+b)
+
+#3 Enter two numbers and perform all arithmetic operations
+
+a,b=map(eval,input().split())
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a % b)
+print(a ** b)
+
+#4 Enter length and breadth of rectangle and find perimeter
+
+length = eval(input())
+breadth = eval(input())
+perimeter = 2 * (length + breadth)
+print(perimeter)
+ 
+#5 Enter length and breadth of rectangle and find area
+
+length = eval(input())
+breadth = eval(input())
+area = length * breadth
+print(area)
+
+#6 Enter radius of circle and find diameter, circumference and area
+
+import math
+radius = eval(input())
+diameter = 2 * radius
+circumference = 2 * math.pi * radius
+area = math.pi * radius * radius
+print(diameter)
+print(circumference)
+print(area)
+
+#7 Convert length in centimeter to meter and kilometer
+
+cm = eval(input())
+meter = cm / 100
+kilometer = cm / 100000
+print(meter)
+print(kilometer)
+
+#8 Enter temperature in Celsius and convert to Fahrenheit
+
+celsius = eval(input())
+fahrenheit = (celsius * 9/5) + 32
+print(fahrenheit)
+
+#9 Enter temperature in Fahrenheit and convert to Celsius
+
+fahrenheit = eval(input())
+celsius = (fahrenheit - 32) * 5/9
+print(celsius)
+
+#10 Convert days into years, weeks and days
+
+days = eval(input())
+years = days // 365
+weeks = (days % 365) // 7
+remaining_days = (days % 365) % 7
+print(years)
+print(weeks)
+print(remaining_days)
+
+#11 Find power of any number x ^ y
+
+x = eval(input())
+y = eval(input())
+result = x ** y
+print(result)
+
+#12 Calculate square root of a number
+
+import math
+num = eval(input("Enter a number: "))
+sqrt_value = math.sqrt(num)
+print(sqrt_value)
+
+#13 Enter two angles of a triangle and find the third angle
+
+angle1 = eval())
+angle2 = eval())
+angle3 = 180 - (angle1 + angle2)
+print(angle3)
+
+#14 Enter base and height of a triangle and find its area
+
+base = eval(input())
+height = eval(input())
+area = 0.5 * base * height
+print(area)
+
+#15 Calculate area of an equilateral triangle
+
+import math
+
+side = eval(input())
+area = (math.sqrt(3) / 4) * side * side
+print(area)
+ 
+#16 Enter marks of five subjects and calculate total, average and percentage
+
+marks = []
+for i in range(5):
+    mark = eval(input())
+    marks.append(mark)
+total = sum(marks)
+average = total / 5
+percentage = (total / 500) * 100
+print(total)
+print(average)
+print(percentage)
+
+#17 Enter P, T, R and calculate Simple Interest 
+
+P,T,R = map(eval,input().split())
+SI = (P * T * R) / 100
+print(SI)
+
+#18 Enter P, T, R and calculate Compound Interest
+
+P,T,R = map(eval,input().split())
+CI = P * (1 + R / 100) ** T
+print(CI)
