@@ -9,3 +9,130 @@ r=int(input())
 for i in range(1,r+1):
     print(" "*(r-i),end=" ")
     print("*"*r)
+
+
+
+# mirrored rhombus star pattern
+*****
+ *****
+  *****
+   *****
+    *****
+
+r=int(input())
+p=r
+for i in range(1,r+1):
+    for j in range(1,2*r):
+        if(j<i):
+           print(" ",end=' ')
+        elif(p>j):
+           print(" ",end=' ')
+        else:
+           print("*",end=' ' )
+    print( )
+    p+=1
+
+
+
+# hollow square star pattern with diagonal
+*****
+** **
+* * *
+** **
+*****
+
+n=int(input())
+for i in range(1,n+1):
+   for j in range(1,n+1):
+      if(i==1 or i==r or j==1 or j==r or i+j=n+1 or i==j):
+          print("*",end=" ")
+      else:
+          print(" ",end=" ")
+
+
+
+# hollow rhombus, parallelogram star pattern
+    *****
+   *   *
+  *   *
+ *   *
+*****
+
+r=int(input())
+for i in range(1,r+1):
+   print(" "*(r-i),end=" ")
+   for j ion range(1,r+1):
+      if(i==1 or i==r or j==1 or j==r):
+          print("*",end=" ")
+      else:
+          print(" ",end=" ")
+   print()
+
+
+
+# square star pattern 
+*****
+*****
+*****
+*****
+*****
+
+n=int(input())
+for i in range(n):
+   for j in range(n):
+      print("*",end=" ")
+
+
+
+# pyramid star pattern
+    *
+   ***
+  *****
+ *******
+*********
+
+n=int(input())
+a=n-1
+b=n+1
+for i in range(1,n+1):
+   for j in range(1,2*r):
+      if(j<=a or j>=b):
+         print(" ",end=' ')
+      else:
+         print("*",end=' ')
+   print( )
+   a-=1
+   b+=1  
+
+
+# hollow diamond star pattern
+**********
+****  ****
+***    ***
+**      **
+*        *
+*        *
+**      **
+***    ***
+****  ****
+**********
+
+r=int(input())
+n,a=r,r
+for i in range(1,2*r):
+   for j in range(1,2*r):
+      if(j<=n or j>a):
+         print("*",end=' ')
+      else:
+         print(" ",end=' ')
+   print( )
+   if(i<r):
+      n=n-1
+      a=a+1
+   elif i==5:
+      pass
+   else:
+      n=n+1
+      a=a-1
+      
+       
