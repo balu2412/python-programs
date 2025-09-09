@@ -1,0 +1,171 @@
+'''
+11111
+00000
+11111
+00000
+11111
+'''
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if(i%2==0):
+            print("0",end=' ')
+        else:
+            print("1",end=" ")
+    print()
+
+
+  '''
+11111
+10001
+10001
+10001
+11111
+'''
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if(i==1 or i==n or j==1 or j==n):
+            print("1",end=' ')
+        else:
+            print("0",end=' ')
+    print( )
+
+
+  '''
+12345
+23456
+34567
+45678
+56789
+'''
+n=int(input())
+a=0
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        print(j+a,end=' ')
+    print()
+    a+=1
+
+
+  '''
+555555555
+544444445
+543333345
+543222345
+543212345
+543222345
+543333345
+544444445
+555555555
+'''
+
+r=int(input())
+z=2*r
+for i in range(1,z):
+    for j in range(1,z):
+        if(i==1 or j==1 or i==9 or j==9):
+            print(r,end=" ")
+        elif(i==2 or j==2 or i==8 or j==8):
+            print(r-1,end=" ")
+        elif(i==3 or j==3 or i==7 or j==7):
+            print(r-2,end=" ")
+        elif(i==4 or j==4 or i==6 or j==6):
+            print(r-3,end=" ")  
+        elif(i==5 or j==5 ):
+            print(r-4,end=" ")
+    print()
+
+
+
+  '''
+11111
+2222
+333
+44
+5
+'''
+n=int(input())
+p=n
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if(j<=p):
+            print(i,end=" ")
+        else:
+            print(" ",end=' ')
+    print( )
+    p-=1
+
+
+  '''
+12345
+1234
+123
+12
+1
+'''
+n=int(input())
+p=n
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if(j<=p):
+            print(j,end=" ")
+        else:
+            print(" ",end=" ")
+    print( )
+    p-=1
+
+
+  '''
+1
+12
+123
+1234
+12345
+1234
+123
+12
+1
+'''
+n=int(input())
+p=1
+for i in range(1,2*n):
+    for j in range(1,n+1):
+        if(j<=p):
+            print(j,end=" ")
+        else:
+            print(" ",end=" ")
+    print( )
+    if i<n:
+        p+=1
+    else:
+        p-=1
+
+
+  '''
+1       1
+ 2     2
+  3   3
+   4 4
+    5
+   4 4
+  3   3
+ 2     2
+1       1
+'''
+
+n=int(input())
+a=2*n
+b=1
+for i in range(1,a):
+    for j in range(1,a):
+        if(i+j==a or i==j):
+            print(b,end=' ')
+        else:
+            print(" ",end=" ")
+        
+    print( )
+    if i<n:
+        b+=1
+    else:
+        b-=1
