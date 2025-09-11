@@ -1,0 +1,76 @@
+n=57863
+o/p=63+86+78+57
+
+n=int(input())
+s=0
+while(1):
+    r=n%100
+    n=n//10
+    s=s+r
+print(s)
+
+  
+o/p=3*6*8*7*5
+
+n=int(input())
+s=1
+while(1):
+    r=n%10
+    n=n//10
+    s=s*r
+print(s)
+
+
+o/p= 863*578*5
+  
+n=int(input())
+s=1
+while(1):
+    r=n%1000
+    n=n//100
+    s=s*r
+print(s)   
+
+
+
+n=int(input("enter"))
+b=n
+g=0
+while(n!=0):
+    v=n%10
+    if(v>g):
+        g=v
+    n//=10
+p=0
+k=0
+z=0
+while(b!=0):
+    r=b%g
+    z=r*(10**p)
+    b=b//g
+    p+=1
+    k+=z
+s=0
+while(k!=0):
+    r=k%10
+    k//=10
+    s=(s*10)+r
+print(s)
+h=0
+c=0
+x=0
+while(s!=0):
+    r=s%10
+    x=r*(g**h)
+    s=s//10
+    h+=1
+    c+=x
+print(c)
+
+
+
+  
+  
+
+
+
