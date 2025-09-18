@@ -1,0 +1,47 @@
+#sliding window (max number in elements)
+l=list(map(int,input().split()))
+n=int(input())
+t=[]
+r=[]
+i=0
+j=0
+while(j<len(l)):
+    if(len(t)==0 or t[-1]>l[j]):
+        t.append(l[j])
+    else:
+        while(len(t)!=0 and t[-1]<l[j]):
+            t.pop(-1)
+        t.append(l[j])
+    if j-i+1<n:
+        j+=1
+    elif j-i+1==n:
+        r.append(t[0])
+        if t[0]==l[i]:
+            t.pop(0)
+        i+=1
+        j+=1
+print(r)
+
+#sliding window (min number in elements)
+l=list(map(int,input().split()))
+n=int(input())
+t=[]
+r=[]
+i=0
+j=0
+while(j<len(l)):
+    if(len(t)==0 or t[-1]<l[j]):
+        t.append(l[j])
+    else:
+        while(len(t)!=0 and t[-1]>l[j]):
+            t.pop(-1)
+        t.append(l[j])
+    if j-i+1<n:
+        j+=1
+    elif j-i+1==n:
+        r.append(t[0])
+        if t[0]==l[i]:
+            t.pop(0)
+        i+=1
+        j+=1
+print(r)
